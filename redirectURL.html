@@ -1,0 +1,58 @@
+
+Hariom Maurya
+Thu, Feb 23, 11:13 AM (5 days ago)
+to me
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+Unicommerce Hraiom
+</title>
+</head>
+
+<body>
+<h1 style="color:blue;">
+Unicommerce
+</h1>
+
+
+
+<script>
+window.onload = function() {
+console.log("load");
+const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const redirect_uri = urlParams.get('state')
+    const code = urlParams.get('code')
+    console.log(code);
+    console.log(redirect_uri);
+    console.log(queryString);
+    window.location.href=redirect_uri+'&fk_code='+code;
+      
+     console.log( 'cookies' + document.cookie);
+    `var cookies = document.cookie.split(';');
+     console.log( 'cookies.split' + cookies);
+     cookies.includes('Subdomain=api.flipkart.net');
+     const flipkartCookieIndex = cookies.indexOf('Subdomain=api.flipkart.net');
+     document.cookie = allCookies[flipkartCookieIndex] + "=;expires=" + new Date(0).toUTCString();
+     
+     
+     function sleep (time) {
+      return new Promise((resolve) => setTimeout(resolve, time));
+    }
+
+    // Usage!
+    sleep(10000).then(() => {
+        // Do something after the sleep!
+    });
+   
+
+};
+
+</script>
+</body>
+
+</html>
